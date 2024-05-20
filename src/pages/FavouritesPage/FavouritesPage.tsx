@@ -20,8 +20,7 @@ export const FavouritesPage = () => {
   const countOfFavourites = visibleProducts.length;
 
   const textCountItems =
-    countOfFavourites === 1 ? '1 item'
-    : `${countOfFavourites} items`;
+    countOfFavourites === 1 ? '1 item' : `${countOfFavourites} items`;
 
   return (
     <div className="favourite favourite__content">

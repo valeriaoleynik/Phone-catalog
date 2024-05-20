@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 import { Product } from '../types/Product';
 import { ProductCategory } from '../types/ProductCategory';
 import { client } from '../utils/httpClient';
@@ -25,18 +26,15 @@ export function getBrandNewProducts(products: Product[]) {
 }
 
 export function getPhones(products: Product[]) {
-  return products
-    .filter(product => product.category === ProductCategory.Phone);
+  return products.filter(product => product.category === ProductCategory.Phone);
 }
 
 export function getTablets(products: Product[]) {
-  return products
-    .filter(product => product.category === ProductCategory.Tablet);
+  return products.filter(product => product.category === ProductCategory.Tablet);
 }
 
 export function getAccessories(products: Product[]) {
-  return products
-    .filter(product => product.category === ProductCategory.Accessory);
+  return products.filter(product => product.category === ProductCategory.Accessory);
 }
 
 export function getSuggestedProducts(products: Product[]) {
