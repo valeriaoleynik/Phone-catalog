@@ -1,9 +1,20 @@
 import { createRoot } from 'react-dom/client';
+import { HashRouter as Router } from 'react-router-dom';
+import { ProductsProvider } from './store/ProductsContext';
 
-import 'bulma/css/bulma.css';
-import '@fortawesome/fontawesome-free/css/all.css';
-import './index.scss';
+import { Root } from './Root';
+import { FavouritesProductsProvider } from './store/FavouritesContext';
+import { CartProvider } from './store/CartContext';
 
-import { App } from './App';
-
-createRoot(document.getElementById('root') as HTMLDivElement).render(<App />);
+createRoot(document.getElementById('root') as HTMLElement)
+  .render(
+    <Router>
+      <ProductsProvider>
+        <FavouritesProductsProvider>
+          <CartProvider>
+            <Root />
+          </CartProvider>
+        </FavouritesProductsProvider>
+      </ProductsProvider>
+    </Router>,
+  );
