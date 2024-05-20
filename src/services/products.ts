@@ -19,19 +19,24 @@ export function getHotPriceProducts(products: Product[]) {
 }
 
 export function getBrandNewProducts(products: Product[]) {
-  return [...products].sort((productA, productB) => productB.price - productA.price).slice(0, 8);
+  return [...products]
+    .sort((productA, productB) => productB.price - productA.price)
+    .slice(0, 8);
 }
 
 export function getPhones(products: Product[]) {
-  return products.filter(product => product.category === ProductCategory.Phone);
+  return products
+    .filter(product => product.category === ProductCategory.Phone);
 }
 
 export function getTablets(products: Product[]) {
-  return products.filter(product => product.category === ProductCategory.Tablet);
+  return products
+    .filter(product => product.category === ProductCategory.Tablet);
 }
 
 export function getAccessories(products: Product[]) {
-  return products.filter(product => product.category === ProductCategory.Accessory);
+  return products
+    .filter(product => product.category === ProductCategory.Accessory);
 }
 
 export function getSuggestedProducts(products: Product[]) {

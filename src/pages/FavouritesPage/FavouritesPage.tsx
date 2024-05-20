@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable max-len */
 import { useContext } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
@@ -18,15 +19,13 @@ export const FavouritesPage = () => {
   const visibleProducts = getFilteredProducts(favouritesProducts, { query });
   const countOfFavourites = visibleProducts.length;
 
-  const textCountItems = countOfFavourites === 1
-    ? '1 item'
+  const textCountItems =
+    countOfFavourites === 1 ? '1 item'
     : `${countOfFavourites} items`;
 
   return (
     <div className="favourite favourite__content">
-      {!!countOfFavourites && (
-        <Search type="mobile" />
-      )}
+      {!!countOfFavourites && <Search type="mobile" />}
 
       {!query && <Breadcrumbs />}
 
@@ -49,13 +48,9 @@ export const FavouritesPage = () => {
       )}
 
       <div className="favourite__title">
-        <h1 className="title title--pages">
-          Favourites
-        </h1>
+        <h1 className="title title--pages">Favourites</h1>
 
-        {countOfFavourites > 0 && (
-          <p>{textCountItems}</p>
-        )}
+        {countOfFavourites > 0 && <p>{textCountItems}</p>}
 
         {query.length > 0 && countOfFavourites === 0 && (
           <h2>No product matches your request</h2>

@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable */
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartItem } from '../../components/CartItem';

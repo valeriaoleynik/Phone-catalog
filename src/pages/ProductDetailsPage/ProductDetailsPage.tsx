@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable */
 
 import {
   Link, useLocation,

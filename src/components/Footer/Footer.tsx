@@ -47,16 +47,13 @@ export const Footer = () => (
         </nav>
 
         <div className="footer__back">
-          <p className="footer__back-text">
-            Back to top
-          </p>
+          <p className="footer__back-text">Back to top</p>
 
           <button
             type="button"
             className="button button__arrow button__arrow--top"
             onClick={backToTop}
           />
-
         </div>
       </div>
     </div>

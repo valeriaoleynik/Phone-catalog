@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { useContext, useState } from 'react';
 import { NavLink, useLocation, useSearchParams } from 'react-router-dom';

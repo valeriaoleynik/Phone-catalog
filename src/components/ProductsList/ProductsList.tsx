@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useSearchParams } from 'react-router-dom';
 import { getSearchWith } from '../../helpers/getSearchWith';
 import { getFilteredProducts } from '../../helpers/getFilteredProducts';

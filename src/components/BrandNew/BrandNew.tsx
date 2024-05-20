@@ -10,9 +10,7 @@ export const BrandNew = () => {
   return (
     <section className="brand-new">
       <div className="brand-new__content">
-        <h1 className="title">
-          Brand new models
-        </h1>
+        <h1 className="title">Brand new models</h1>
 
         <ProductsSlider products={brandNewProducts} />
       </div>

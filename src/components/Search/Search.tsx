@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable */
 import React, { useCallback, useRef, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 

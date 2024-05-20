@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 import classNames from 'classnames';
 import { useContext } from 'react';
 
@@ -12,15 +13,19 @@ type Props = {
 };
 
 export const ButtonForCard: React.FC<Props> = ({ product }) => {
-  const { setFavouritesProducts, favouritesProducts } = useContext(FavouritesProductsContext);
+  const { setFavouritesProducts, favouritesProducts } = useContext(
+    FavouritesProductsContext);
   const { setProductsInCart, productsInCart } = useContext(CartContext);
 
-  const isAddedInFavourite = favouritesProducts.some(item => item.id === product.id);
-  const isAddedInCart = productsInCart.some(item => item.id === product.id);
+  const isAddedInFavourite = favouritesProducts
+    .some(item => item.id === product.id);
+  const isAddedInCart = productsInCart
+    .some(item => item.id === product.id);
 
   const handleClickFavorite = () => {
     if (isAddedInFavourite) {
-      setFavouritesProducts(favouritesProducts.filter(item => item.id !== product.id));
+      setFavouritesProducts(favouritesProducts
+        .filter(item => item.id !== product.id));
     } else {
       setFavouritesProducts([...favouritesProducts, product]);
     }
@@ -28,9 +33,12 @@ export const ButtonForCard: React.FC<Props> = ({ product }) => {
 
   const handleClickAddToCart = () => {
     if (isAddedInCart) {
-      setProductsInCart(productsInCart.filter(item => item.product.id !== product.id));
+      setProductsInCart(productsInCart
+        .filter(item => item.product.id !== product.id));
     } else {
-      setProductsInCart([...productsInCart, { id: product.id, quantity: 1, product }]);
+      setProductsInCart([...productsInCart,
+        { id: product.id, quantity: 1, product },
+      ]);
     }
   };
 

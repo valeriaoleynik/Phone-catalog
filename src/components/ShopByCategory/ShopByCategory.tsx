@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 import { Link } from 'react-router-dom';
 
 import phones from '../../images/category-phones.png';

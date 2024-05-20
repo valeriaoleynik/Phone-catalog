@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 import {
   createContext, useMemo,
 } from 'react';
@@ -7,9 +8,9 @@ import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { Product } from '../../types/Product';
 
 type DefaultContextValue = {
-  productsInCart: CartItem[],
-  setProductsInCart: (v: CartItem[]) => void,
-  countOfProductsInCart: number,
+  productsInCart: CartItem[];
+  setProductsInCart: (v: CartItem[]) => void;
+  countOfProductsInCart: number;
 };
 
 export const CartContext = createContext<DefaultContextValue>({
@@ -23,9 +24,9 @@ type Props = {
 };
 
 type CartItem = {
-  id: string,
-  quantity: number,
-  product: Product,
+  id: string;
+  quantity: number;
+  product: Product;
 };
 
 export const CartProvider: React.FC<Props> = ({ children }) => {

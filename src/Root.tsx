@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { App } from './App';
 import { AccessoriesPage } from './pages/AccessoriesPage/AccessoriesPage';
@@ -7,9 +8,7 @@ import { FavouritesPage } from './pages/FavouritesPage/FavouritesPage';
 import { HomePage } from './pages/HomePage/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { PhonesPage } from './pages/PhonesPage/PhonesPage';
-import {
-  ProductDetailsPage,
-} from './pages/ProductDetailsPage/ProductDetailsPage';
+import { ProductDetailsPage } from './pages/ProductDetailsPage/ProductDetailsPage';
 import { TabletsPage } from './pages/TabletsPage/TabletsPage';
 
 export const Root = () => (

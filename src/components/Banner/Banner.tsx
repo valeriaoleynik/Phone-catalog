@@ -6,17 +6,17 @@ import './Banner.scss';
 import { BASE_URL } from '../../utils/constants';
 
 interface Photo {
-  id: number,
-  src: string,
-  description: string,
-  preview?: string,
+  id: number;
+  src: string;
+  description: string;
+  preview?: string;
 }
 
 type Props = {
   photos: Photo[];
 };
 
-export const Banner:React.FC<Props> = ({ photos }) => {
+export const Banner: React.FC<Props> = ({ photos }) => {
   const [indexActivePhoto, setIndexActivePhoto] = useState(0);
 
   const handleNextImage = () => {

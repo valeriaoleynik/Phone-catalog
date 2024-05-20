@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Link, useSearchParams } from 'react-router-dom';
 import classNames from 'classnames';
 

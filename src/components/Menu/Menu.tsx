@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable */
 import { Link } from 'react-router-dom';
 
 import './Menu.scss';

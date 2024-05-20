@@ -10,9 +10,7 @@ export const RandomProducts = () => {
   return (
     <section className="random-products">
       <div className="random-products__content">
-        <h1 className="title">
-          You may also like
-        </h1>
+        <h1 className="title">You may also like</h1>
 
         <ProductsSlider products={randomList} />
       </div>

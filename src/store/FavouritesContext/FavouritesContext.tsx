@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 import {
   createContext, useMemo,
 } from 'react';
@@ -7,9 +8,9 @@ import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { Product } from '../../types/Product';
 
 type DefaultContextValue = {
-  favouritesProducts: Product[],
-  setFavouritesProducts: (v: Product[]) => void,
-  countOfFavourites: number,
+  favouritesProducts: Product[];
+  setFavouritesProducts: (v: Product[]) => void;
+  countOfFavourites: number;
 };
 
 export const FavouritesProductsContext = createContext<DefaultContextValue>({

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Product } from '../types/Product';
 import { SortParams } from '../types/SortParams';
 

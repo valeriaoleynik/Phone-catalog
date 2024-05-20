@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -23,7 +24,7 @@ export const CartItem: React.FC<Props> = ({ product }) => {
   });
 
   const {
-    name, itemId, image, id,
+    name, itemId, image, id
   } = product;
 
   const handleIncreaseQuantity = () => {

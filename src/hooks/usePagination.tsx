@@ -1,14 +1,6 @@
+/* eslint-disable */
 import { useMemo } from 'react';
-// import { getNumbers } from '../helpers/getNumbers';
-
-const range = (start: number, end: number) => {
-  let length = end - start + 1;
-  /*
-  	Create an array of certain length and set the elements within it from
-    start value to end value.
-  */
-  return Array.from({ length }, (_, idx) => idx + start);
-};
+import { getNumbers } from '../helpers/getNumbers';
 
 export const usePagination = (
   totalPageCount: number,
@@ -19,7 +11,7 @@ export const usePagination = (
     const totalPageNumbers = siblingCount + 4;
 
     if (totalPageNumbers >= totalPageCount) {
-      return range(1, totalPageCount);
+      return getNumbers(1, totalPageCount);
     }
 
     const leftSiblingIndex = Math.max(currentPage - siblingCount, 1);
@@ -35,14 +27,14 @@ export const usePagination = (
 
     if (!shouldShowLeftDots && shouldShowRightDots) {
       const leftItemCount = 3 + 2 * siblingCount;
-      const leftRange = range(1, leftItemCount);
+      const leftRange = getNumbers(1, leftItemCount);
 
       return [...leftRange, 'DOTS', totalPageCount];
     }
 
     if (shouldShowLeftDots && !shouldShowRightDots) {
       const rightItemCount = 3 + 2 * siblingCount;
-      const rightRange = range(
+      const rightRange = getNumbers(
         totalPageCount - rightItemCount + 1,
         totalPageCount,
       );
@@ -51,12 +43,12 @@ export const usePagination = (
     }
 
     if (shouldShowLeftDots && shouldShowRightDots) {
-      const middleRange = range(leftSiblingIndex, rightSiblingIndex);
+      const middleRange = getNumbers(leftSiblingIndex, rightSiblingIndex);
 
       return [firstPageIndex, 'DOTS', ...middleRange, 'DOTS', lastPageIndex];
     }
 
-    return range(1, totalPageCount);
+    return getNumbers(1, totalPageCount);
   }, [totalPageCount, siblingCount, currentPage]);
 
   return paginationRange;

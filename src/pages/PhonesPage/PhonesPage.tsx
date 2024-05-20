@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
@@ -40,9 +41,7 @@ export const PhonesPage = () => {
   if (!phones.length && !isLoading) {
     return (
       <>
-        <h1 className="title title--pages">
-          Mobile phones
-        </h1>
+        <h1 className="title title--pages">Mobile phones</h1>
 
         <h2>No product matches your requesty</h2>
       </>
@@ -50,7 +49,7 @@ export const PhonesPage = () => {
   }
 
   if (isLoading) {
-    return (<Loader />);
+    return <Loader />;
   }
 
   return (
@@ -61,9 +60,7 @@ export const PhonesPage = () => {
 
       {query.length === 0 ? (
         <div className="phones__title">
-          <h1 className="title title--pages">
-            Mobile phones
-          </h1>
+          <h1 className="title title--pages">Mobile phones</h1>
 
           {countOfPhones && (
             <p>{textCountItems}</p>

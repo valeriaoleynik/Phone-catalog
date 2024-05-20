@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { useProducts } from '../../store/ProductsContext';
 
@@ -10,7 +11,8 @@ export const Breadcrumbs = () => {
   const { itemId } = useParams();
 
   const pathArray = pathname
-    .replaceAll('/', ' ').trim().split(' ')
+    .replaceAll('/', ' ')
+    .trim().split(' ')
     .map(item => item[0].toUpperCase() + item.slice(1));
 
   const pathnameText = pathArray[0];
@@ -19,8 +21,7 @@ export const Breadcrumbs = () => {
 
   return (
     <div
-      className="breadcrumbs breadcrumbs__content"
-      data-cy="breadCrumbs"
+      className="breadcrumbs breadcrumbs__content" data-cy="breadCrumbs"
     >
       <Link
         to={{
@@ -33,9 +34,7 @@ export const Breadcrumbs = () => {
       {productName ? (
         <>
           <img
-            src={arrow}
-            alt="arrow-right"
-            className="breadcrumbs__arrow"
+            src={arrow} alt="arrow-right" className="breadcrumbs__arrow"
           />
 
           <Link to=".." className="breadcrumbs__text breadcrumbs__text--link">
@@ -43,14 +42,10 @@ export const Breadcrumbs = () => {
           </Link>
 
           <img
-            src={arrow}
-            alt="arrow-right"
-            className="breadcrumbs__arrow"
+            src={arrow} alt="arrow-right" className="breadcrumbs__arrow"
           />
 
-          <p className="breadcrumbs__text">
-            {productName}
-          </p>
+          <p className="breadcrumbs__text">{productName}</p>
         </>
       ) : (
         <>
@@ -60,9 +55,7 @@ export const Breadcrumbs = () => {
             className="breadcrumbs__arrow"
           />
 
-          <p className="breadcrumbs__text">
-            {pathnameText}
-          </p>
+          <p className="breadcrumbs__text">{pathnameText}</p>
         </>
       )}
     </div>

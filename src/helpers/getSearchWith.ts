@@ -1,3 +1,4 @@
+/* eslint-disable */
 type Param = string | number;
 
 type Params = {

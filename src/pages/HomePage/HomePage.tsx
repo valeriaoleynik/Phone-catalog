@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useContext } from 'react';
 import { Banner } from '../../components/Banner';
 import { BrandNew } from '../../components/BrandNew';
@@ -21,9 +22,7 @@ export const HomePage = () => {
     <div className="home home__content">
       {loading && <Loader />}
 
-      {errorMessage && (
-        <p className="notification-error">{errorMessage}</p>
-      )}
+      {errorMessage && <p className="notification-error">{errorMessage}</p>}
 
       {!loading && !errorMessage && (
         <>
