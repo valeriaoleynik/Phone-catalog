@@ -24,9 +24,16 @@ export const ProductsSlider: React.FC<Props> = ({ products, type }) => {
       {
         breakpoint: 1279,
         settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
           slidesToShow: 2,
         },
       },
+      
       {
         breakpoint: 639,
         settings: {

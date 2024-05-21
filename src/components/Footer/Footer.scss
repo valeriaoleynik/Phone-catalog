@@ -3,8 +3,6 @@
 @import '../../styles/utilsStyles/variables';
 
 .footer {
-  height: $footer-height;
-
   &::before {
     content: "";
     display: block;

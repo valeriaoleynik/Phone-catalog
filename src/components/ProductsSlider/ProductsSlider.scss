@@ -2,6 +2,12 @@
 @import '../../styles/utilsStyles/extends';
 @import '../../styles/utilsStyles/variables';
 
+.slick-prev:before,
+.slick-next:before
+{
+    color: transparent;
+}
+
 .slick {
   &-track {
     display: flex;
@@ -13,7 +19,7 @@
   }
 
   &-slide {
-    width: 272px;
+    width: 272px !important;
   }
 
   &-arrow {
@@ -30,6 +36,8 @@
     border: 1px solid $icons-color;
 
     transform: none;
+
+   
 
     &:hover,
     &:focus {

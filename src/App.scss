@@ -9,7 +9,13 @@
 @import './styles/blocks/button';
 
 .app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   &__main {
+    flex-grow: 1;
     padding: 25px 0 80px;
   }
 }
@@ -29,9 +35,4 @@
   &--pages {
     margin-bottom: 8px;
   }
-}
-
-
-.main {
-  min-height: calc(100vh - $footer-height - $header-height);
 }

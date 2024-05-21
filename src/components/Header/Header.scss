@@ -2,7 +2,6 @@
 @import '../../styles/utilsStyles/variables';
 
 .header {
-  height: $header-height;
 
   &::after {
     content: "";
@@ -17,7 +16,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    height: $header-height;
   }
 }
